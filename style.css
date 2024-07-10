@@ -12,7 +12,8 @@ a {
   font: inherit;
   vertical-align: baseline;
 }
-button {
+button,
+input {
   background-color: transparent;
   border: none;
 }
@@ -41,7 +42,7 @@ body {
 }
 .form__container {
   max-width: 365px;
-  margin: 0 auto;
+  margin-inline: auto;
   display: flex;
   gap: 4rem;
   height: 100%;
@@ -69,10 +70,10 @@ body {
   text-align: center;
   gap: 10px;
 }
-.form__heading__subtitle {
+.form__subtitle {
   color: #525252;
 }
-.form__heading__title {
+.form__title {
   color: #333;
   font-size: 2rem;
   font-weight: 700;
@@ -90,7 +91,6 @@ body {
 .form__field {
   background-color: #f0edffcc;
   border-radius: 16px;
-  width: 100%;
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -102,15 +102,13 @@ body {
 }
 .form__field input {
   outline: none;
-  border: none;
-  background-color: transparent;
   width: 100%;
 }
-.form__field__btn {
+.form__btn {
   padding: 15px 30px;
   width: fit-content;
-  margin: 0.5rem auto 0;
-  border: none;
+  margin-inline: auto;
+  margin-top: 0.5rem;
   color: white;
   transition: all 0.5s;
   border-radius: 16px;
@@ -223,4 +221,22 @@ body {
 /* This will not work with "direction" attribute has to be dir */
 [dir="rtl"] .left__img {
   transform: translateY(-50%) rotateY(180deg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    height: auto;
+  }
+  .form__container {
+    padding-inline: 1rem;
+  }
+  .left {
+    display: none;
+  }
+  .seperator div:first-child,
+  .seperator div:last-child {
+    width: 25%;
+  }
 }

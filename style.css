@@ -172,7 +172,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/imgs/pattern.png");
+  background: url("./imgs/pattern.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

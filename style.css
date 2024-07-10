@@ -1,0 +1,226 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+p,
+a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+/* Right Side */
+.right {
+  width: 100%;
+}
+.form__container {
+  max-width: 365px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form */
+.form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form heading */
+.form__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+.form__heading__subtitle {
+  color: #525252;
+}
+.form__heading__title {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Form Fields */
+.form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.form__field {
+  background-color: #f0edffcc;
+  border-radius: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 14px 18px;
+}
+.field__icon {
+  width: 20px;
+  height: 20px;
+}
+.form__field input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+.form__field__btn {
+  padding: 15px 30px;
+  width: fit-content;
+  margin: 0.5rem auto 0;
+  border: none;
+  color: white;
+  transition: all 0.5s;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0px 8px 21px 0px #00000029;
+  background: linear-gradient(99.78deg, #9181f4 -5.85%, #5038ed 109.55%);
+}
+
+.seperator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.seperator div:first-child,
+.seperator div:last-child {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 30%;
+  background-color: #f0f0f0;
+}
+.seperator div:first-child {
+  inset-inline-start: 0;
+}
+.seperator div:last-child {
+  inset-inline-end: 0;
+}
+
+/* Login buttons */
+.login__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid #f0edff;
+  border-radius: 16px;
+  padding: 0.5rem;
+  font-size: 14px;
+}
+.login__btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Left Side */
+.left {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/imgs/pattern.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.left__content {
+  position: relative;
+  width: 412px;
+  height: 522px;
+  border-radius: 46px;
+  border: 1px solid #ffffff85;
+  background-color: #ffffff36;
+}
+.left__content p {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 46px;
+  max-width: 200px;
+  color: white;
+  padding: 1.5rem;
+  text-align: start;
+}
+.left__icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset-inline-start: -36px;
+  bottom: 15%;
+  border-radius: 9999px;
+  background-color: white;
+  padding: 1rem;
+}
+.left__icon img {
+  width: 40px;
+  height: 40px;
+}
+.left__img {
+  position: absolute;
+  bottom: 0;
+  top: 50%;
+  inset-inline-end: 12%;
+  transform: translateY(-50%) rotateY(0deg);
+  height: 524px;
+}
+
+/* This will not work with "direction" attribute has to be dir */
+[dir="rtl"] .left__img {
+  transform: translateY(-50%) rotateY(180deg);
+}
